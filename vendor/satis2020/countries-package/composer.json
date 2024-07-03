@@ -1,0 +1,33 @@
+{
+    "name": "satis2020/countries-package",
+    "description": "satis2020/countries-package ",
+    "license": "MIT",
+    "version" : "1.0.0",
+    "authors": [
+        {
+            "name": "ATTA YAYA Arafath",
+            "email": "arafath@dmdconsult.com"
+        }
+    ],
+    "require": {
+      "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Satis\\CountriesPackage\\": "src/",
+            "Satis\\CountriesPackage\\Database\\Seeds\\": "database/seeds/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Satis\\CountriesPackage\\Providers\\CountriesPackageServiceProvider"
+            ],
+            "aliases": {
+                "Country": "Satis\\CountriesPackage\\Facades\\Country",
+                "State": "Satis\\CountriesPackage\\Facades\\State"
+            }
+        }
+    },
+    "require-dev": {}
+}
